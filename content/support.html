@@ -9,7 +9,7 @@ body{background:#6190E8;background:-webkit-linear-gradient(to right,#A7BFE8,#619
             <div class="uk-child-width-auto uk-grid-medium uk-flex-inline uk-flex-center uk-grid" uk-grid>
                 <div class="uk-first-column"><button class="uk-button uk-button-primary uk-button-large" type="button" uk-toggle="target: #supticketmodal">Create a Support Ticket</button></div>
                 <div class="uk-first-column"><button class="uk-button uk-button-primary uk-button-large" type="button" uk-toggle="target: #requestsupport">Request Remote Support</button></div>
-                <div class="uk-first-column"><button class="uk-button uk-button-primary uk-button-large" type="button" uk-toggle="target: #sendamessage">Send us a Message</button></div>
+                <div class="uk-first-column"><button class="uk-button uk-button-primary uk-button-large" type="button" onclick="window.chaport.q('open');">Send us a Message</button></div>
             </div>
          </div>
     </div
@@ -30,17 +30,6 @@ body{background:#6190E8;background:-webkit-linear-gradient(to right,#A7BFE8,#619
     <div class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title">Request Remote Support</h2>
             <p>Someday, in the not too distant future, this modal will allow you to remote support from one of our highly skilled technicians, so that we can resolve all possible computer issues. Stay tuned for updates!</p>
-            <p class="uk-text-right">
-            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-            <button class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
-        </p>
-    </div>
-</div>
-        
-<div id="sendamessage" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title">Open a Support Ticket</h2>
-            <p>Someday, in the not too distant future, this modal will allow you to send us a personal message with the problem you are having with your computer. Stay tuned for updates!</p>
             <p class="uk-text-right">
             <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
             <button class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
