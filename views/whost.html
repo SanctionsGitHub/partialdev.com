@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?- include('../partials/head.html') ?>
+</head>
+<body>
+    <?- include('../partials/navbar.html') ?>
+    <div id="sidebar" uk-offcanvas>
+    <div class="uk-offcanvas-bar">
+    <?- include('../partials/whsidebar.html') ?>
+    </div>
+    </div>
+    <div class="uk-container uk-container-expand">
+    <div class="sidebar">
+    <?- include('../partials/whsidebar.html') ?>
+    </div>
+    <div class="main uk-section uk-section-default">
+    <div class="uk-container uk-container-small uk-position-relative">
+        <div>
+            <div>
+        <?- content ?>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <?- include('../partials/foot.html') ?>
+</body>
+</html>

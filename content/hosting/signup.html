@@ -1,0 +1,51 @@
+    <div uk-height-viewport="offset-top: true; offset-bottom: true" class="uk-section uk-section-small uk-flex uk-flex-middle uk-text-center" style="box-sizing: border-box; min-height: calc(-183px + 100vh);">
+        <div class="uk-width-1-1">
+            <div class="uk-container">
+                <h1 class="uk-heading-primary uk-legend">Create a hosting account</h1>
+                <div class="uk-margin-medium" style="max-width:860px;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px">
+                    <div class="uk-alert-success" uk-alert>
+    <p></p>
+</div>
+                  <form id="hostingSignup" class="uk-grid-small uk-form-stacked" style="max-width:860px;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px" uk-grid>
+    <div class="uk-width-1-2@s">
+        <label class="uk-form-label" for="firstname" style="text-align:left">First Name</label>
+        <input class="uk-input" type="text" name="firstname" placeholder="John">
+    </div>
+    <div class="uk-width-1-2@s">
+        <label class="uk-form-label" for="lastname" style="text-align:left">Last Name</label>
+        <input class="uk-input" type="text" name="lastname" placeholder="Doe">
+    </div>
+    <div class="uk-margin">
+            <label class="uk-form-label" for="email" style="text-align:left">E-mail</label>
+            <input class="uk-input" type="text" name="email" placeholder="example@mail.com">
+    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="username" style="text-align:left">Username</label>
+                        <input class="uk-input" type="text" name="username" placeholder="JDoe">
+                      </div>
+                      <div class="uk-margin">
+                        <label class="uk-form-label" for="password" style="text-align:left">Password</label>
+                        <input class="uk-input" type="text" name="password" placeholder="SecurePW123">
+                      </div>
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+$('#hostingSignup').submit(function(e){
+  e.preventDefault();
+  $.ajax({
+      url:'https://hosting.partialdev.com/signup/index.php',
+      type:'post',
+      data:$('#hostingSignup').serialize(),
+      success:function(){
+        alert("Success!");
+        $(".uk-alert-success p").innerHTML = "Hooray! Your account has successfully ben created. You can now <a href='https://panel.partialdev.com:2083'>log in</a>!";
+      }
+  });
+});
+</script>
